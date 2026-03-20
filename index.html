@@ -4,9 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
+    <!-- Fonts & Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <!-- App -->
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="app" id="app">
+      <!-- Header -->
+      <header class="app-header">
+        <!-- Navbar -->
+        <nav class="navbar"></nav>
+      </header>
+      <!-- Summary Bar -->
+      <section class="summary-section"></section>
+      <!-- Middle -->
+      <section class="middle-section"></section>
+      <!-- Filter Bar -->
+      <section class="filter-section"></section>
+      <!-- Transaction List -->
+      <section class="transaction-section"></section>
+    </div>
   </body>
 </html>
