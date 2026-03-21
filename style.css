@@ -30,6 +30,8 @@ body {
   max-width: 1024px;
   min-height: 100vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -302,6 +304,10 @@ select:focus {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.transaction-list li {
+  list-style: none;
 }
 
 .transaction-empty {
