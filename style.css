@@ -1,0 +1,131 @@
+:root {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --accent: #10b981;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+  --positive: #10b981;
+  --negative: #ef4444;
+  --bg-income: #f0fdf4;
+  --bg-expense: #fef2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.app-header {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.navbar-brand i {
+  color: var(--accent);
+}
+
+.navbar-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.current-month {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.theme-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+}
+
+/* SUMMARY SECTION */
+.summary-section {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: var(--bg-primary);
+  gap: 0.25rem;
+}
+
+.summary-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.summary-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+#balance-card {
+  background-color: var(--bg-primary);
+}
+#income-card {
+  background-color: var(--bg-income);
+}
+#expense-card {
+  background-color: var(--bg-expense);
+}
+
+#balance-card .summary-value {
+  color: var(--text-primary);
+}
+
+#income-card .summary-value {
+  color: var(--positive);
+}
+
+#expense-card .summary-value {
+  color: var(--negative);
+}
