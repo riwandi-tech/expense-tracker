@@ -311,9 +311,60 @@ select:focus {
   list-style: none;
 }
 
+/* TRANSACTION ITEM */
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.transaction-name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.transaction-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.transaction-amount {
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: color 150ms ease;
+  flex-shrink: 0;
+}
+
+.btn-delete:hover {
+  color: var(--negative);
+}
+
 .transaction-empty {
   text-align: center;
   padding: 2rem;
   color: var(--text-secondary);
   font-size: 0.9rem;
+  width: 100%;
 }

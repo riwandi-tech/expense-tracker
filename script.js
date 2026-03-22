@@ -88,6 +88,8 @@ function addTransaction(e) {
   // Tambahkan ke array
   transactions.push(transaction);
 
+  saveToStorage();
+
   // Reset form
   form.reset();
 
@@ -164,6 +166,7 @@ function render() {
   // Cek transactions
   if (transactions.length === 0) {
     const li = document.createElement('li');
+    li.classList.add('transaction-empty');
     li.textContent = 'Belum ada transaksi';
     transactionList.appendChild(li);
     return;
@@ -176,8 +179,37 @@ function render() {
   });
 }
 
+function saveToStorage() {
+  const data = JSON.stringify(transactions);
+  localStorage.setItem('transactions', data);
+}
+
+function loadFromStorage() {
+  const data = localStorage.getItem('transactions');
+  if (data !== null) {
+    transactions = JSON.parse(data);
+  }
+}
+
+function deleteTransaction(e) {
+  const btn = e.target.closest('.btn-delete');
+
+  if (!btn) return;
+
+  const id = btn.dataset.id;
+  const idNumber = Number(id);
+
+  transactions = transactions.filter((t) => t.id !== idNumber);
+  saveToStorage();
+  render();
+}
+
 // Event Listener
 form.addEventListener('submit', addTransaction);
 inputTipe.addEventListener('change', updateKategori);
+transactionList.addEventListener('click', deleteTransaction);
+
+// Init
+loadFromStorage();
 updateKategori();
 render();
