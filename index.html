@@ -58,6 +58,13 @@
           <h2 class="form-title">Tambah Transaksi</h2>
           <form id="transaction-form">
             <div class="form-group">
+              <label for="input-tipe">Tipe Transaksi</label>
+              <select id="input-tipe">
+                <option value="pengeluaran">Pengeluaran</option>
+                <option value="pemasukan">Pemasukan</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label for="input-nama">Nama Transaksi</label>
               <input
                 type="text"
@@ -73,28 +80,11 @@
                 placeholder="contoh: 25000"
               />
             </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="input-kategori">Kategori</label>
-                <select id="input-kategori">
-                  <option value="">Pilih Kategori</option>
-                  <option value="Makan">Makan</option>
-                  <option value="Transport">Transport</option>
-                  <option value="Belanja">Belanja</option>
-                  <option value="Hiburan">Hiburan</option>
-                  <option value="Kesehatan">Kesehatan</option>
-                  <option value="Pendidikan">Pendidikan</option>
-                  <option value="Tagihan">Tagihan</option>
-                  <option value="Tabungan">Tabungan</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="input-tipe">Tipe</label>
-                <select id="input-tipe">
-                  <option value="pengeluaran">Pengeluaran</option>
-                  <option value="pemasukan">Pemasukan</option>
-                </select>
-              </div>
+            <div class="form-group">
+              <label for="input-kategori">Kategori</label>
+              <select id="input-kategori">
+                <option value="">Pili Kategori</option>
+              </select>
             </div>
             <div class="form-group">
               <label for="input-tanggal">Tanggal</label>
