@@ -53,15 +53,15 @@ Through this project, the following concepts are explored and applied:
 
 ## 🗺️ Roadmap
 
-- [ ] Phase 1 — Project Setup & HTML Structure
-- [ ] Phase 2 — CSS Styling & Theme System
-- [ ] Phase 3 — Core JavaScript (Add & Display)
-- [ ] Phase 4 — Delete & localStorage
-- [ ] Phase 5 — Filter, Search & Sort
-- [ ] Phase 6 — Chart.js Integration
-- [ ] Phase 7 — Budget Limit Feature
-- [ ] Phase 8 — Dark/Light Mode Toggle
-- [ ] Phase 9 — Polish & Final Touches
+- [✅] Phase 1 — Project Setup & HTML Structure
+- [✅] Phase 2 — CSS Styling & Theme System
+- [✅] Phase 3 — Core JavaScript (Add & Display)
+- [✅] Phase 4 — Delete & localStorage
+- [✅] Phase 5 — Filter, Search & Sort
+- [✅] Phase 6 — Chart.js Integration
+- [✅] Phase 7 — Budget Limit Feature
+- [✅] Phase 8 — Dark/Light Mode Toggle
+- [✅] Phase 9 — Polish & Final Touches
 
 ## 👤 Author
 
