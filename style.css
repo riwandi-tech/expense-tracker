@@ -34,7 +34,6 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
 .app-header {
   background-color: var(--bg-surface);
   border-bottom: 1px solid var(--border);
@@ -84,7 +83,6 @@ body {
   color: var(--accent);
 }
 
-/* SUMMARY SECTION */
 .summary-section {
   display: flex;
   gap: 1rem;
@@ -135,7 +133,6 @@ body {
   color: var(--negative);
 }
 
-/* MIDDLE SECTION */
 .middle-section {
   display: flex;
   flex-direction: row;
@@ -150,14 +147,38 @@ body {
   padding: 1.5rem;
   border: 1px solid var(--border);
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .chart-card {
+  width: 350px;
   flex-shrink: 0;
-  width: 280px;
-  padding: 1rem;
+  padding: 1.5rem;
   border: 1px solid var(--border);
   border-radius: 12px;
+  background-color: var(--bg-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+}
+
+.chart-card canvas {
+  flex: 1;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 300px !important;
+  margin: 1rem 0;
+}
+
+.chart-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .form-title {
@@ -237,7 +258,6 @@ select:focus {
   background-color: var(--accent-hover);
 }
 
-/* FILTER SECTION */
 .filter-section {
   display: flex;
   gap: 0.75rem;
@@ -245,6 +265,12 @@ select:focus {
   background-color: var(--bg-surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  align-items: center;
+  overflow-x: auto;
+}
+
+.filter-section::-webkit-scrollbar {
+  height: 4px;
 }
 
 .search-box {
@@ -272,12 +298,12 @@ select:focus {
 }
 
 #filter-kategori,
+#filter-tipe,
 #filter-bulan {
   width: 160px;
   flex-shrink: 0;
 }
 
-/* TRANSACTION SECTION */
 .transaction-section {
   flex: 1;
   padding: 1rem 1.5rem;
@@ -311,7 +337,6 @@ select:focus {
   list-style: none;
 }
 
-/* TRANSACTION ITEM */
 .transaction-item {
   display: flex;
   align-items: center;
@@ -345,6 +370,13 @@ select:focus {
   flex-shrink: 0;
 }
 
+.transaction-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.btn-duplicate,
 .btn-delete {
   background: none;
   border: none;
@@ -354,7 +386,10 @@ select:focus {
   padding: 0.25rem;
   border-radius: 4px;
   transition: color 150ms ease;
-  flex-shrink: 0;
+}
+
+.btn-duplicate:hover {
+  color: var(--accent);
 }
 
 .btn-delete:hover {

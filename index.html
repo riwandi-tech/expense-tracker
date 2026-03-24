@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Tracker</title>
-    <!-- Fonts & Icons -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -13,17 +12,12 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <!-- Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <!-- App -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="app" id="app">
-      <!-- Header -->
       <header class="app-header">
-        <!-- Navbar -->
         <nav class="navbar">
           <div class="navbar-brand">
             <i class="ri-wallet-3-fill"></i>
@@ -32,12 +26,11 @@
           <div class="navbar-actions">
             <span class="current-month">Maret 2026</span>
             <button class="theme-toggle">
-              <i class="ri-sun-line"></i>
+              <i class="ri-moon-line"></i>
             </button>
           </div>
         </nav>
       </header>
-      <!-- Summary Bar -->
       <section class="summary-section">
         <div class="summary-card" id="balance-card">
           <span class="summary-label">Total Balance</span>
@@ -52,7 +45,6 @@
           <span class="summary-value" id="total-expense">Rp 0</span>
         </div>
       </section>
-      <!-- Middle -->
       <section class="middle-section">
         <div class="form-card">
           <h2 class="form-title">Tambah Transaksi</h2>
@@ -83,7 +75,7 @@
             <div class="form-group">
               <label for="input-kategori">Kategori</label>
               <select id="input-kategori">
-                <option value="">Pili Kategori</option>
+                <option value="">Pilih Kategori</option>
               </select>
             </div>
             <div class="form-group">
@@ -101,7 +93,6 @@
           <canvas id="expense-chart"></canvas>
         </div>
       </section>
-      <!-- Filter Bar -->
       <section class="filter-section">
         <div class="search-box">
           <i class="ri-search-line"></i>
@@ -111,18 +102,18 @@
             placeholder="Cari transaksi..."
           />
         </div>
+        <select id="filter-tipe">
+          <option value="">Pilih Tipe</option>
+          <option value="all">Semua Tipe</option>
+          <option value="pemasukan">Pemasukan</option>
+          <option value="pengeluaran">Pengeluaran</option>
+        </select>
         <select id="filter-kategori">
+          <option value="">Pilih Kategori</option>
           <option value="all">Semua Kategori</option>
-          <option value="Makan">Makan</option>
-          <option value="Transport">Transport</option>
-          <option value="Belanja">Belanja</option>
-          <option value="Hiburan">Hiburan</option>
-          <option value="Kesehatan">Kesehatan</option>
-          <option value="Pendidikan">Pendidikan</option>
-          <option value="Tagihan">Tagihan</option>
-          <option value="Tabungan">Tabungan</option>
         </select>
         <select id="filter-bulan">
+          <option value="">Pilih Bulan</option>
           <option value="all">Semua Bulan</option>
           <option value="1">Januari</option>
           <option value="2">Februari</option>
@@ -138,7 +129,6 @@
           <option value="12">Desember</option>
         </select>
       </section>
-      <!-- Transaction List -->
       <section class="transaction-section">
         <div class="transaction-header">
           <h2 class="transaction-title">Transaksi</h2>
@@ -151,5 +141,6 @@
         </ul>
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
